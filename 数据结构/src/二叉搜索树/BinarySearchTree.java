@@ -1,8 +1,10 @@
 package 二叉搜索树;
 
+import 二叉搜索树.printer.BinaryTreeInfo;
+
 import java.util.Comparator;
 
-public class BinarySearchTree<E>{
+public class BinarySearchTree<E> implements BinaryTreeInfo {
 
     private int size;
     private Node<E> root;
@@ -88,7 +90,6 @@ public class BinarySearchTree<E>{
             throw new IllegalArgumentException("element must not be null");
         }
     }
-    
 
     private static class Node<E> {
         E element;
@@ -100,5 +101,33 @@ public class BinarySearchTree<E>{
             this.element = element;
             this.parent = parent;
         }
+    }
+
+    @Override
+    public Object root() {
+        return root;
+    }
+
+    @Override
+    public Object left(Object node) {
+        return ((Node<E>)node).left;
+    }
+
+    @Override
+    public Object right(Object node) {
+        return ((Node<E>)node).right;
+    }
+
+    @Override
+    public Object string(Object node) {
+        Node<E> myNode = (Node<E>)node;
+        Node<E> parent = ((Node<E>) node).parent;
+        String parentStr;
+        if (parent == null) {
+            parentStr = "null";
+        } else {
+            parentStr = parent.element.toString();
+        }
+        return myNode.element + "_" + parentStr;
     }
 }
