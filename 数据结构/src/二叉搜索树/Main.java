@@ -2,19 +2,45 @@ package 二叉搜索树;
 
 import 二叉搜索树.printer.BinaryTrees;
 
-import java.util.TreeSet;
-
 public class Main {
     public static void main(String[] args) {
-        BinarySearchTree<Person> binarySearchTree1 = new BinarySearchTree<>();
-        binarySearchTree1.add(new Person("张三", 18));
-        binarySearchTree1.add(new Person("李四", 19));
-        binarySearchTree1.add(new Person("王五", 18));
-        BinarySearchTree<Person> binarySearchTree2 = new BinarySearchTree<>((e1, e2) -> e2.getAge() - e1.getAge());
-        binarySearchTree2.add(new Person("张三", 18));
-        binarySearchTree2.add(new Person("李四", 19));
-        binarySearchTree2.add(new Person("王五", 18));
-        BinaryTrees.println(binarySearchTree1);
-        BinaryTrees.println(binarySearchTree2);
+        BinarySearchTree binarySearchTree = new BinarySearchTree();
+        Integer[] nums = {7, 4, 2, 1, 3, 5, 9, 8, 11, 10, 12};
+        for (Integer num : nums) {
+            binarySearchTree.add(num);
+        }
+        BinaryTrees.print(binarySearchTree);
+        System.out.println();
+        binarySearchTree.preorder(new BinarySearchTree.Visitor<Integer>() {
+            @Override
+            boolean visit(Integer element) {
+                System.out.print(element + " ");
+                return false;
+            }
+        });
+        System.out.println();
+        binarySearchTree.inorder(new BinarySearchTree.Visitor<Integer>() {
+            @Override
+            boolean visit(Integer element) {
+                System.out.print(element + " ");
+                return false;
+            }
+        });
+        System.out.println();
+        binarySearchTree.postorder(new BinarySearchTree.Visitor<Integer>() {
+            @Override
+            boolean visit(Integer element) {
+                System.out.print(element + " ");
+                return false;
+            }
+        });
+        System.out.println();
+        binarySearchTree.levelOrder(new BinarySearchTree.Visitor<Integer>() {
+            @Override
+            boolean visit(Integer element) {
+                System.out.print(element + " ");
+                return false;
+            }
+        });
     }
 }
