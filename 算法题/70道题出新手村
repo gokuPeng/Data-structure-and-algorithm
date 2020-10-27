@@ -1,4 +1,4 @@
-Array数组
+Array数组 √
 1 两数之和 | Two sum
 
 268 缺失数字 | Missing Number
@@ -7,7 +7,7 @@ Array数组
 
 90 子集II | Subsets II
 
-Linked List链表
+Linked List链表   √
 206 反转链表 | Reverse Linked List
 
 21 合并两个有序链表 | Merge Two Sorted Lists
@@ -52,7 +52,7 @@ Heap堆
 
 451 根据字符出现频率排序 | Sort Characters By Frequency
 
-Tree树
+Tree树   √
 938 二叉搜索树的范围和 | Range Sum of BST
 
 700 二叉搜索树的搜索 | Search in a Binary Search Tree
