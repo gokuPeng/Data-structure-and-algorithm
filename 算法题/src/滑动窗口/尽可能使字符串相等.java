@@ -1,4 +1,4 @@
-package 滑动数组;
+package 滑动窗口;
 
 /**
  * @author 彭一鸣 1208. 尽可能使字符串相等 https://leetcode-cn.com/problems/get-equal-substrings-within-budget/
