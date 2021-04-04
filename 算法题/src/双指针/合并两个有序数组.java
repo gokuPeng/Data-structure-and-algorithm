@@ -1,7 +1,5 @@
 package 双指针;
 
-import java.util.Arrays;
-
 /**
  * @author 彭一鸣 88. 合并两个有序数组 https://leetcode-cn.com/problems/merge-sorted-array/
  * @since 2021/1/4 17:36
